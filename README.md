@@ -3,4 +3,4 @@ Projeto da disciplina Projeto e Análise de Algoritmos, ministrada pelo Professo
 
 ## Autores:
 - Eduardo de Azevedo dos Santos, Matrícula 14/0136967
-- Rafael Alencar, Matrícula
+- Rafael Silva de Alencar, Matrícula 13/0130834

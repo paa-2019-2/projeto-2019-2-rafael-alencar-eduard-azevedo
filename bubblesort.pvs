@@ -8,6 +8,7 @@ bubblesort : THEORY
 BEGIN
 
 IMPORTING   sorting 
+IMPORTING complexity
 
 l,l1,l2 : VAR list[nat]
 i,j,k,n : VAR nat
@@ -59,5 +60,10 @@ cbubblesort(lc) : [list[nat], nat] =
 IF null?(lc) THEN lc
 ELSE cbubblesort_aux(lc, lc`1`length - 1)
 ENDIF
+
+% Lema bubblersort eh quadratico
+bubblesort_is_quadratic: LEMMA
+ FORALL (lc:list[nat]):
+ member(LAMBDA(n:nat): cbubblesort(lc)`2, Omicron(LAMBDA(n:nat):length(lc)^2 ))
 
 END bubblesort

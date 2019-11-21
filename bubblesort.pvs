@@ -15,7 +15,7 @@ i,j,k,n : VAR nat
 lc		: VAR [list[nat], nat]
 
 % This is the bubbling function that moves the greates key in
-% the n-prefix of a list l to the n-th position of the list. 
+% the n-prefix of a list l to the n-th position of the list.
 bubbling(l, ( n : below[ l`length])) : RECURSIVE  list[nat] =
 IF n = 0 THEN l
 ELSIF car(l) > car(cdr(l)) THEN cons(car(cdr(l)), bubbling(cons(car(l),cdr(cdr(l))), n - 1))
@@ -26,8 +26,8 @@ MEASURE n
 % Função bubbling com o contador
 cbubbling(lc, ( n : below[ lc`1`length])) : RECURSIVE [list[nat], nat] =
 IF n = 0 THEN lc
-ELSIF car(lc`1) > car(cdr(lc`1)) THEN cons(car(cdr(lc`1)), lc`2 + 1, cbubbling(cons(car(lc`1), cdr(cdr(lc`1))), n - 1))
-ELSE cons(car(lc`1), lc`2 + 1, cbubbling(cdr(lc`1), n - 1))
+ELSIF car(lc`1) > car(cdr(lc`1)) THEN cons(car(cdr(lc`1)), cbubbling((cons(car(lc`1), cdr(cdr(lc`1))), lc`2 + 1), n - 1)`1)
+ELSE cons(car(lc`1), cbubbling((cdr(lc`1), lc`2 + 1), n - 1)`1)
 ENDIF
 MEASURE n
 

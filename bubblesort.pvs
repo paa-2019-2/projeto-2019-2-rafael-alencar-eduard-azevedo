@@ -56,14 +56,14 @@ ELSE bubblesort_aux(l, l`length - 1 )
 ENDIF
 
 % Função bubblesort com contador
-cbubblesort(lc) : [list[nat], nat] =
-IF null?(lc`1) THEN lc
-ELSE cbubblesort_aux(lc, lc`1`length - 1)
+cbubblesort(l) : [list[nat], nat] =
+IF null?(l) THEN (l,0)
+ELSE cbubblesort_aux((l, 0), l`length - 1)
 ENDIF
 
 % Lema bubblersort eh quadratico
 bubblesort_is_quadratic: LEMMA
- FORALL (lc:list[nat]):
- member(LAMBDA(n:nat): cbubblesort(lc), Omicron(LAMBDA(n:nat):length(lc)^2 ))
+ FORALL (l:list[nat]):
+ member(LAMBDA(n:nat): cbubblesort(l)`2, Omicron(LAMBDA(n:nat):length(l)^2 ))
 
 END bubblesort

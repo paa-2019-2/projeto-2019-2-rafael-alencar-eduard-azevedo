@@ -1,0 +1,51 @@
+(bubblesort
+ (bubbling_TCC1 0
+  (bubbling_TCC1-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (bubbling_TCC2 0
+  (bubbling_TCC2-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (bubbling_TCC3 0
+  (bubbling_TCC3-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (bubbling_TCC4 0
+  (bubbling_TCC4-1 nil 3783543636 ("" (termination-tcc) nil nil) nil
+   nil))
+ (bubbling_TCC5 0
+  (bubbling_TCC5-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (bubbling_TCC6 0
+  (bubbling_TCC6-1 nil 3783543636 ("" (termination-tcc) nil nil) nil
+   nil))
+ (cbubbling_TCC1 0
+  (cbubbling_TCC1-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (cbubbling_TCC2 0
+  (cbubbling_TCC2-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (cbubbling_TCC3 0
+  (cbubbling_TCC3-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (cbubbling_TCC4 0
+  (cbubbling_TCC4-1 nil 3783543636 ("" (termination-tcc) nil nil) nil
+   nil))
+ (cbubbling_TCC5 0
+  (cbubbling_TCC5-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil nil))
+ (cbubbling_TCC6 0
+  (cbubbling_TCC6-1 nil 3783543636 ("" (termination-tcc) nil nil) nil
+   nil))
+ (bubblesort_aux_TCC1 0
+  (bubblesort_aux_TCC1-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil
+   nil))
+ (bubblesort_aux_TCC2 0
+  (bubblesort_aux_TCC2-1 nil 3783543636 ("" (termination-tcc) nil nil)
+   nil nil))
+ (cbubblesort_aux_TCC1 0
+  (cbubblesort_aux_TCC1-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil
+   nil))
+ (cbubblesort_aux_TCC2 0
+  (cbubblesort_aux_TCC2-1 nil 3783543636 ("" (termination-tcc) nil nil)
+   nil nil))
+ (bubblesort_TCC1 0
+  (bubblesort_TCC1-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil
+   nil))
+ (bubblesort_is_quadratic_TCC1 0
+  (bubblesort_is_quadratic_TCC1-1 nil 3783543636
+   ("" (subtype-tcc) nil nil) nil nil))
+ (bubblesort_is_quadratic 0
+  (bubblesort_is_quadratic-1 nil 3783543661 ("" (postpone) nil nil) nil
+   shostak)))
+

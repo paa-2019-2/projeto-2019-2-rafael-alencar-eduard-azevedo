@@ -61,6 +61,7 @@ IF null?(l) THEN (l,0)
 ELSE cbubblesort_aux((l, 0), l`length - 1)
 ENDIF
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%        Lemas        %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,6 +75,14 @@ bubblesort_cbubblesort_equi: LEMMA
 bubbling_cbubbling_equi: LEMMA
  FORALL (l:list[nat]) (n: below[l`length]):
  	bubbling(l,n) = cbubbling(lc,n)`1
+
+
+
+cbubblesort_length: LEMMA
+ FORALL (l:list[nat]): length(cbubblesort(l)`1) = length(l)
+
+count_cbubblesort_ws_general: LEMMA
+ FORALL (l:list[nat]): cbubblesort(l)`2 <= (length(l) * (length(l) - 1))/2
 
 
 % Lema bubblersort eh quadratico

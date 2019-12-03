@@ -42,10 +42,122 @@
  (bubblesort_TCC1 0
   (bubblesort_TCC1-1 nil 3783543636 ("" (subtype-tcc) nil nil) nil
    nil))
+ (bubblesort_aux_cbubblesort_aux_TCC1 0
+  (bubblesort_aux_cbubblesort_aux_TCC1-1 nil 3784369884
+   ("" (subtype-tcc) nil nil) nil nil))
+ (bubblesort_aux_cbubblesort_aux 0
+  (bubblesort_aux_cbubblesort_aux-1 nil 3784373733
+   ("" (postpone) nil nil) nil shostak))
+ (bubblesort_cbubblesort_equi 0
+  (bubblesort_cbubblesort_equi-1 nil 3784358935 ("" (postpone) nil nil)
+   nil shostak))
+ (bubbling_cbubbling_equi 0
+  (bubbling_cbubbling_equi-1 nil 3784358954 ("" (postpone) nil nil) nil
+   shostak))
+ (cbubblesort_length 0
+  (cbubblesort_length-1 nil 3784358987
+   ("" (induct "l")
+    (("1" (expand "cbubblesort") (("1" (propax) nil nil)) nil)
+     ("2" (skeep)
+      (("2" (expand "cbubblesort" 1) (("2" (postpone) nil nil)) nil))
+      nil))
+    nil)
+   nil shostak))
+ (count_cbubblesort_ws_general 0
+  (count_cbubblesort_ws_general-1 nil 3784359007
+   ("" (induct "l")
+    (("1" (expand "cbubblesort")
+      (("1" (expand "length") (("1" (assert) nil nil)) nil)) nil)
+     ("2" (skeep)
+      (("2" (expand "length" 1)
+        (("2" (expand "cbubblesort" 1) (("2" (postpone) nil nil)) nil))
+        nil))
+      nil))
+    nil)
+   nil shostak))
  (bubblesort_is_quadratic_TCC1 0
   (bubblesort_is_quadratic_TCC1-1 nil 3783543636
    ("" (subtype-tcc) nil nil) nil nil))
  (bubblesort_is_quadratic 0
-  (bubblesort_is_quadratic-1 nil 3783543661 ("" (postpone) nil nil) nil
+  (bubblesort_is_quadratic-1 nil 3783543661
+   ("" (expand "member")
+    (("" (expand "Omicron")
+      (("" (skeep)
+        (("" (inst 1 "1/2" "0")
+          (("" (skeep)
+            (("" (lemma "count_cbubblesort_ws_general")
+              (("" (inst?)
+                (("" (lemma "le_cut")
+                  ((""
+                    (inst -1 "cbubblesort(l)`2"
+                     "(length(l) * (length(l)-1))/2"
+                     "1/2 * length(l)^2")
+                    (("" (split)
+                      (("1" (propax) nil nil) ("2" (propax) nil nil)
+                       ("3" (hide -1 2)
+                        (("3" (assert) (("3" (grind) nil nil)) nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((member const-decl "bool" sets nil)
+    (mult_divides2 application-judgement "(divides(m))" divides nil)
+    (mult_divides1 application-judgement "(divides(n))" divides nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (every adt-def-decl "boolean" list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (nnrat_times_nnrat_is_nnrat application-judgement "nonneg_rat"
+     rationals nil)
+    (rat_div_nzrat_is_rat application-judgement "rat" rationals nil)
+    (^ const-decl "real" exponentiation nil)
+    (OR const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (length def-decl "nat" list_props nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (cbubblesort const-decl "[list[nat], nat]" bubblesort nil)
+    (expt def-decl "real" exponentiation nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nzrat_div_nzrat_is_nzrat application-judgement "nzrat" rationals
+     nil)
+    (nat_expt application-judgement "nat" exponentiation nil)
+    (real_le_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (le_cut formula-decl nil extra_real_props nil)
+    (count_cbubblesort_ws_general formula-decl nil bubblesort nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (/ const-decl "[numfield, nznum -> numfield]" number_fields nil)
+    (nznum nonempty-type-eq-decl nil number_fields nil)
+    (/= const-decl "boolean" notequal nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (posrat_div_posrat_is_posrat application-judgement "posrat"
+     rationals nil)
+    (Omicron const-decl "setof[[nat -> nonneg_real]]" complexity nil)
+    (nat_exp application-judgement "nat" exponentiation nil))
    shostak)))
 

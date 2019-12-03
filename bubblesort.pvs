@@ -66,21 +66,28 @@ ENDIF
 %%%%%%%%%%        Lemas        %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Lema bubblesort eh equivalente a cbubblesort
+% Lema bubblesor_aux eh equivalente a cbubblesort_aux
+bubblesort_aux_cbubblesort_aux: LEMMA
+ FORALL(l:list[nat], n:below[l`length]) (c:nat):
+       bubblesort_aux(l,n) = cbubblesort_aux(lc,n)`1
+
+
+% Lema bubblesort eh equivalente a cbubblesort
 bubblesort_cbubblesort_equi: LEMMA
  FORALL(l: list[nat]):
  	   bubblesort(l) = cbubblesort(l)`1
 
-%Lema cbubbling eh equivalente a cbubbling
+% Lema cbubbling eh equivalente a cbubbling
 bubbling_cbubbling_equi: LEMMA
  FORALL (l:list[nat]) (n: below[l`length]):
  	bubbling(l,n) = cbubbling(lc,n)`1
 
 
-
+% Lema tamanho do cbubblesort
 cbubblesort_length: LEMMA
  FORALL (l:list[nat]): length(cbubblesort(l)`1) = length(l)
 
+% Lema count_cbubblesort_ws_general
 count_cbubblesort_ws_general: LEMMA
  FORALL (l:list[nat]): cbubblesort(l)`2 <= (length(l) * (length(l) - 1))/2
 
